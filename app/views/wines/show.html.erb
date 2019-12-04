@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @wine.name %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @wine.year %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @wine.origin %>
+</p>
+
+<p>
+  <strong>Alcohol (%):</strong>
+  
+  <%= display_percentage(@wine.alc) %>
+</p>
+
+<p>
+  <strong>Sugar:</strong>
+  <%= @wine.sugar %>
+</p>
+
+<p>
+  <strong>Price (€):</strong>
+  <%= display_price(@wine.price) %>
+</p>
+
+<p>
+  <strong>Bought:</strong>
+  <%= @wine.wherebought %>
+</p>
+
+
+<%= link_to 'Edit', edit_wine_path(@wine) %> |
+<%= link_to 'Back', wines_path %>
