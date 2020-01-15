@@ -1,3 +1,31 @@
 // Place all the styles related to the Wines controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+  color: blue;
+  font-family: verdana;
+  font-size: 300%;
+}
+p  {
+  color: black;
+  font-family: verdana;
+  #font-size: 160%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+
+a {
+  color: #00f;
+
+  &:visited {
+    color: #9933ff;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}

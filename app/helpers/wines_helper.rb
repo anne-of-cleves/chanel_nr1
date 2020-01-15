@@ -9,4 +9,10 @@ module WinesHelper
 		"%.2f €" % price
 	end
 
+	def display_residual_sugar(intvalue)
+#		ressugar = intvalue / 10.0
+#		"%.1f g" % ressugar
+		"#{intvalue / 10.0} g/L" 
+	end
+
 end

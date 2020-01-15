@@ -8,6 +8,7 @@
       <th>Name</th>
       <th>Year</th>
       <th>Origin</th>
+      <th>Label</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= wine.name %></td>
         <td><%= wine.year %></td>
         <td><%= wine.origin %></td>
+        <td>Label placeholder</td>
         <td><%= link_to 'Show', wine %></td>
         <td><%= link_to 'Edit', edit_wine_path(wine) %></td>
         <td><%= link_to 'Destroy', wine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
