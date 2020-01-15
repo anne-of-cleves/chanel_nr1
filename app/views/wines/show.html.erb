@@ -10,6 +10,7 @@
   <tr>
    <td><strong>Name:</strong></td>
    <td><%= @wine.name %></td>
+   <td rowspan="7"> <%= image_tag(@wine.label.url, alt: 'image') if @wine.label? %></td>
   </tr>
   <tr>
    <td><strong>Year:</strong></td>

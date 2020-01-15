@@ -16,6 +16,11 @@ table, th, td {
   border-collapse: collapse;
 }
 
+td.label {
+	
+	padding: 0;
+}
+
 
 a {
   color: #00f;
@@ -28,4 +33,10 @@ a {
     color: #fff;
     background-color: #000;
   }
+}
+
+img.thumb {
+	margin-top: 8px;
+	margin-left: 4px;
+	margin-right: 4px;
 }
