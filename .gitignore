@@ -29,4 +29,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+# AC: ignore sublime config files 
+/config/application.sublime-workspace
+
 
