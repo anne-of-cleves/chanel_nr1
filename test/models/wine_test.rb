@@ -1,7 +1,46 @@
+# == Schema Information
+#
+# Table name: wines
+#
+#  id          :integer          not null, primary key
+#  alc         :integer
+#  label       :string
+#  name        :string
+#  origin      :string
+#  price       :integer
+#  sugar       :integer
+#  wherebought :string
+#  year        :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
 require 'test_helper'
 
 class WineTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+   test "should not save wine without name" do
+   	 testinstanz_wine = Wine.new
+     assert_not testinstanz_wine.save
+   end
+
+   test "should not save wine if year before 1995" do
+   	 testinstanz_wine = Wine.new(name: "ABC", year: 1994)
+     assert_not testinstanz_wine.save
+   end
+
+   test "should not save wine if year after today" do
+   	 testinstanz_wine = Wine.new(name: "ABC2", year: 2021)
+     assert_not testinstanz_wine.save
+   end
+
+   test "should save wine without year" do
+   	 testinstanz_wine = Wine.new(name: "ABC3")
+     assert testinstanz_wine.save
+   end
+
+   test "should NOT save wine if name not unique" do
+   	 Wine.create(name: "ABC4", year: 2000)
+   	 testinstanz_wine = Wine.new(name: "ABC4", year: 2001)
+     assert_not testinstanz_wine.save
+   end
+
 end

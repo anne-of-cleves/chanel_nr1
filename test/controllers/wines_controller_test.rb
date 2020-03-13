@@ -17,7 +17,7 @@ class WinesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create wine" do
     assert_difference('Wine.count') do
-      post wines_url, params: { wine: { name: @wine.name, year: @wine.year } }
+      post wines_url, params: { wine: { name: "bestMomEver", year: 2014} }
     end
 
     assert_redirected_to wine_url(Wine.last)

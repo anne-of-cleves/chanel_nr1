@@ -1,5 +1,7 @@
  <div class="row">
-    <div class="col-sm-10 offset-sm-1">
+    <div class="col-sm-1" >  
+    </div>      
+    <div class="col-sm-10" style="background-color: white">
 <%= form_with(model: wine, local: true) do |form| %>
   <% if wine.errors.any? %>
     <div id="error_explanation">
@@ -64,14 +66,16 @@
 
   <div class="form-group row">
     <%= form.label :wherebought, class:"col-sm-1 col-form-label" %>
-    <div class="col-sm-11">
-    <%= form.text_field :wherebought, class:"form-control" %>
+    <div style="background-color: white"class="col-sm-11">
+    <%= form.text_field :wherebought, class:"form-control mt-2" %>
         </div>
   </div>
 
   <div class="form-group row">
-    <%= form.label :label %>
-    <%= form.file_field :label %>
+    <%= form.label :label, class:"col-sm-1 col-form-label"%>
+    <div class="col-sm-11">
+    <%= form.file_field :label, class:"form-control" %>
+    </div>
   </div>
 
 
