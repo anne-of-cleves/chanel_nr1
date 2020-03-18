@@ -19,5 +19,9 @@ class Wine < ApplicationRecord
 	validates :year, numericality: { allow_nil: true, 
 		greater_than_or_equal_to: 1995, 
 		less_than_or_equal_to: Date.today.year}
+	validates :alc, numericality: { allow_nil: true, 
+		greater_than_or_equal_to: 9, 
+		less_than_or_equal_to: 20}
+
 	mount_uploader :label, LabelUploader
 end

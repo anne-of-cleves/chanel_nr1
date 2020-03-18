@@ -43,4 +43,13 @@ class WineTest < ActiveSupport::TestCase
      assert_not testinstanz_wine.save
    end
 
+   test "should NOT save wine if alcohol more than 20 percent" do
+   	 testinstanz_wine = Wine.new(name: "ABC20", alc: 21.7)
+     assert_not testinstanz_wine.save
+   end
+
+   test "should NOT save wine if alcohol less than 9 percent" do
+   	 testinstanz_wine = Wine.new(name: "ABC21", alc: 8.5)
+     assert_not testinstanz_wine.save
+   end
 end
