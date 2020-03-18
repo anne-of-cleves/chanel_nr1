@@ -3,7 +3,7 @@
 # Table name: wines
 #
 #  id          :integer          not null, primary key
-#  alc         :integer
+#  alc         :decimal(, )
 #  label       :string
 #  name        :string
 #  origin      :string
