@@ -4,9 +4,8 @@ module WinesHelper
 		"#{intvalue / 10.0} %" if intvalue
 	end
 
-	def display_price(intvalue)
-		if intvalue
-			price = intvalue / 100.0
+	def display_price(price)
+		if price
 			"%.2f €" % price
 		end
 	end

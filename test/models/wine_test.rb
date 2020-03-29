@@ -8,7 +8,7 @@
 #  label       :string
 #  name        :string
 #  origin      :string
-#  price       :integer
+#  price       :decimal(7, 2)
 #  sugar       :integer
 #  wherebought :string
 #  year        :integer
