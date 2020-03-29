@@ -3,6 +3,7 @@
 # Table name: wines
 #
 #  id          :integer          not null, primary key
+#  acidity     :decimal(, )
 #  alc         :decimal(, )
 #  label       :string
 #  name        :string
